@@ -1,0 +1,807 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+  
+}
+
+/* PROFILE SECTION */
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem; /* Balanced gap */
+  height: 80vh;
+  padding: 0 2rem;
+}
+
+.section__pic-container {
+  height: 380px;
+  width: 380px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.3rem solid #2c3e50;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section__text {
+  max-width: 500px;
+  text-align: center; /* Add this if not already present */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section__text__p1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #666;
+}
+
+.title {
+  font-size: 2.8rem;
+  margin: 0.75rem 0;
+  color: #2c3e50;
+  line-height: 1.2;
+}
+
+.section__text__p2 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #555;
+  font-weight: 500;
+  text-align: center; /* Changed from justify-content to text-align */
+}
+
+/* SOCIAL ICONS CONTAINER */
+#socials-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 1.25rem;
+  margin: 2rem auto; /* Centered with auto margins */
+  width: 100%; /* Full width to allow proper centering */
+}
+
+/* If you want to specifically target the social icons */
+#socials-container .icon {
+  height: 2rem;
+  width: 2rem;
+  transition: transform 0.3s ease;
+}
+
+#socials-container .icon:hover {
+  transform: scale(1.1);
+}
+
+/* For the button container above */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem; /* Space between buttons and icons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  #profile {
+    gap: 3rem;
+  }
+  
+  .section__pic-container {
+    height: 320px;
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  
+  .section__pic-container {
+    height: 280px;
+    width: 280px;
+  }
+  
+  .section__text {
+    text-align: center;
+  }
+  
+  .section__text__p1 {
+    font-size: 1.2rem;
+  }
+  
+  .title {
+    font-size: 2.4rem;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ICONS */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+
+
+/* ABOUT SECTION */
+/* ABOUT SECTION */
+/* ABOUT SECTION */
+#about {
+  position: relative;
+  background-color: #f8f9fa;
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-columns {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  
+}
+
+.details-container {
+  flex: 1;
+  background: white;
+  border-radius: 1.5rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 2.5rem;
+}
+
+.text-container {
+  flex: 1;
+  background: white;
+  border-radius: 1.5rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 2.5rem;
+  margin-top: 100px;
+}
+
+/* Rest of your existing CSS for education entries, headers, etc. */
+
+@media (max-width: 900px) {
+  .about-columns {
+    flex-direction: column;
+  }
+  
+  .details-container,
+  .text-container {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* EXPERIENCE SECTION */
+#experience {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.details-container {
+  background: white;
+  border-radius: 1rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+  padding: 1.5rem;
+  flex: 1 1 calc(33.333% - 2rem); /* 3 cards per row (minus gap) */
+  min-width: 250px;
+  max-width: 350px;
+}
+
+/* Skill progress bars */
+.skill-container {
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .details-container {
+    flex: 1 1 calc(50% - 2rem); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .about-containers {
+    flex-direction: column;
+  }
+  
+  .details-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+/* PROJECTS SECTION */
+#projects {
+  padding: 4rem 2rem;
+}
+
+.section__text__p1 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  overflow: hidden;
+  height: auto;
+}
+
+.project-img {
+  flex: 1;
+  border-radius: 1.5rem 0 0 1.5rem;
+  width: 570px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.project-details {
+  flex: 1.5;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3498db;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-img {
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+}
+
+
+/* CONTACT */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Certifications Section */
+/* ===== CERTIFICATIONS SECTION ===== */
+#certifications {
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.certifications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certifications-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This is the key property */
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.certification-item {
+  background-color: white;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 280px; /* Fixed width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Rest of your styles remain the same */
+.certification-img-container {
+  width: 150px;
+  height: 100px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certification-img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.certification-title {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 0.6rem;
+}
+
+
+/* Internships Section */
+#internships {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.section__text__p1 {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.experience-details-container {
+  max-width: 800px; /* Narrower container for single column */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.internship-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.internship-header {
+  margin-bottom: 1.5rem;
+}
+
+.internship-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.internship-company {
+  font-size: 1.1rem;
+  color: #3498db;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.internship-duration {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.internship-description {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.internship-description li {
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+/* Technology Tags */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.frontend {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.backend {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.other {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .internship-card {
+    padding: 1.5rem;
+  }
+  
+  .experience-details-container {
+    padding: 0 1rem;
+  }
+}
+/* ... (keep all your other existing styles) ... */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .certification-item {
+    width: 100%;
+    max-width: 350px;
+  }
+}

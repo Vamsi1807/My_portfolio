@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">John Doe</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">John Doe</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+
+  
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.jpg" alt="John Doe profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">John Doe</h1>
+      <p class="section__text__p2">Frontend Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/gopavarapu-sri-rama-krishna-vamsi-43517726a/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/Vamsi1807'" />
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section id="about">
+    <div class="section-header">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+    </div>
+
+    <div class="about-container">
+      <div class="about-columns">
+        <div class="details-container education-card">
+          <div class="card-header">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+          </div>
+          <div class="education-entries">
+            <div class="education-entry">
+              <h4>Vasireddy Venkatadri Institute of Technology</h4>
+              <p class="education-duration">2022-2026</p>
+              <p class="education-details">
+                Bachelor of Technology, Information Technology<br>
+                <span class="highlight">CGPA: 8.6 (Till Date)</span>
+              </p>
+            </div>
+            <div class="education-entry">
+              <h4>Narayana Junior College</h4>
+              <p class="education-duration">2020-2022</p>
+              <p class="education-details">
+                Intermediate (MPC)<br>
+                <span class="highlight">Score: 90.4%</span>
+              </p>
+            </div>
+            <div class="education-entry">
+              <h4>Sai Aditya School</h4>
+              <p class="education-duration">Graduated 2020</p>
+              <p class="education-details">
+                SSC (10th Grade)<br>
+                <span class="highlight">Score: 598/600</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-container">
+          <p class="about-text">
+            I'm a passionate Information Technology student with strong academic performance across all levels of
+            education. My consistent high scores demonstrate my dedication to learning and problem-solving. Currently
+            pursuing my BTech with an impressive 8.6 CGPA, I'm developing expertise in software development, database
+            systems, and web technologies. My educational journey from Sai Aditya School to VVIT has equipped me with
+            both technical knowledge and critical thinking skills.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+
+
+
+
+
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="skill-container">
+            <div class="skill-name">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill-name">
+              <span>CSS</span>
+              <span>85%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill-name">
+              <span>JavaScript</span>
+              <span>75%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill-name">
+              <span>React</span>
+              <span>80%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Development</h2>
+          <div class="skill-container">
+            <div class="skill-name">
+              <span>Node.js</span>
+              <span>70%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill-name">
+              <span>Express</span>
+              <span>65%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 65%"></div>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill-name">
+              <span>MongoDB</span>
+              <span>60%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%"></div>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill-name">
+              <span>PostgreSQL</span>
+              <span>55%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 55%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="internships">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Internships</h1>
+    <div class="experience-details-container">
+      <!-- Internship 1 -->
+      <div class="internship-card">
+        <div class="internship-header">
+          <h3 class="internship-title">Frontend Developer Intern</h3>
+          <p class="internship-company">Tech Solutions Inc.</p>
+          <p class="internship-duration">June 2024 - August 2024</p>
+        </div>
+        <ul class="internship-description">
+          <li>Developed responsive web interfaces using React.js</li>
+          <li>Collaborated with UX designers to implement new features</li>
+          <li>Optimized application performance by 30%</li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tag frontend">React</span>
+          <span class="tag frontend">JavaScript</span>
+          <span class="tag backend">Node.js</span>
+        </div>
+      </div>
+
+      <!-- Internship 2 -->
+
+    </div>
+  </section>
+
+
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+
+    <div class="project-card">
+      <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+      <div class="project-details">
+        <h2 class="project-title">Project One</h2>
+        <p class="project-description">
+          This is a description of Project One. It includes the main features, technologies used, and the purpose of the
+          project. You can view the source code on GitHub or see the live demo by clicking the buttons below.
+        </p>
+        <div class="btn-container">
+          <button class="btn project-btn" onclick="location.href='https://github.com/Vamsi1807'">
+            Github
+          </button>
+          <button class="btn project-btn" onclick="location.href='https://github.com/Vamsi1807'">
+            Live Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="certifications">
+    <p class="section__text__p1">See my</p>
+    <h1 class="title">Certifications</h1>
+    <div class="experience-details-container">
+      <div class="certifications-grid">
+        <div class="certification-item">
+          <div class="certification-img-container">
+            <img src="assets/google cloud.png" alt="Google Cloud Certification" class="certification-img" />
+          </div>
+          <h2 class="certification-title">Associate Cloud Developer</h2>
+          <p class="certification-org">Google</p>
+          <p class="certification-date">May 2025</p>
+          <a href="#" class="certification-link">View Credential</a>
+        </div>
+        <div class="certification-item">
+          <div class="certification-img-container">
+            <img src="assets/eduskills_logo.png" alt="Android Certification" class="certification-img" />
+          </div>
+          <h2 class="certification-title">Google Android Development</h2>
+          <p class="certification-org">Eduskills</p>
+          <p class="certification-date">April 2024</p>
+          <a href="#" class="certification-link">View Credential</a>
+        </div>
+        <div class="certification-item">
+          <div class="certification-img-container">
+            <img src="assets/nptel.jpg" alt="NPTEL Certification" class="certification-img" />
+          </div>
+          <h2 class="certification-title">NPTEL Java</h2>
+          <p class="certification-org">NPTEL</p>
+          <p class="certification-date">April 2024</p>
+          <a href="#" class="certification-link">View Credential</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="vamsigopavarapu07@gmail.com">vamsigopavarapu07@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p>
+          <a href="https://www.linkedin.com/in/gopavarapu-sri-rama-krishna-vamsi-43517726a/">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
