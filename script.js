@@ -6,10 +6,10 @@ function toggleMenu() {
   hamburgerIcon.classList.toggle("open");
 }
 // Add this to your script.js
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Animate progress bars on scroll
   const progressBars = document.querySelectorAll('.progress');
-  
+
   const animateProgressBars = () => {
     progressBars.forEach(bar => {
       const width = bar.style.width;
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 100);
     });
   };
-  
+
   // Run animation when experience section is in view
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }, { threshold: 0.5 });
-  
+
   const experienceSection = document.querySelector('#experience');
   if (experienceSection) {
     observer.observe(experienceSection);
