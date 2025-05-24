@@ -152,7 +152,7 @@ section {
 
 .section-container {
   display: flex;
-  
+
 }
 
 /* PROFILE SECTION */
@@ -160,7 +160,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem; /* Balanced gap */
+  gap: 4rem;
+  /* Balanced gap */
   height: 80vh;
   padding: 0 2rem;
 }
@@ -171,7 +172,7 @@ section {
   border-radius: 50%;
   overflow: hidden;
   border: 0.3rem solid #2c3e50;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .section__pic-container img {
@@ -182,7 +183,8 @@ section {
 
 .section__text {
   max-width: 500px;
-  text-align: center; /* Add this if not already present */
+  text-align: center;
+  /* Add this if not already present */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,17 +208,22 @@ section {
   margin-bottom: 2rem;
   color: #555;
   font-weight: 500;
-  text-align: center; /* Changed from justify-content to text-align */
+  text-align: center;
+  /* Changed from justify-content to text-align */
 }
 
 /* SOCIAL ICONS CONTAINER */
 #socials-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
   gap: 1.25rem;
-  margin: 2rem auto; /* Centered with auto margins */
-  width: 100%; /* Full width to allow proper centering */
+  margin: 2rem auto;
+  /* Centered with auto margins */
+  width: 100%;
+  /* Full width to allow proper centering */
 }
 
 /* If you want to specifically target the social icons */
@@ -235,7 +242,8 @@ section {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem; /* Space between buttons and icons */
+  margin-bottom: 1rem;
+  /* Space between buttons and icons */
 }
 
 /* Responsive adjustments */
@@ -243,7 +251,7 @@ section {
   #profile {
     gap: 3rem;
   }
-  
+
   .section__pic-container {
     height: 320px;
     width: 320px;
@@ -256,24 +264,24 @@ section {
     gap: 2.5rem;
     text-align: center;
   }
-  
+
   .section__pic-container {
     height: 280px;
     width: 280px;
   }
-  
+
   .section__text {
     text-align: center;
   }
-  
+
   .section__text__p1 {
     font-size: 1.2rem;
   }
-  
+
   .title {
     font-size: 2.4rem;
   }
-  
+
   .section__text__p2 {
     font-size: 1.4rem;
   }
@@ -358,7 +366,7 @@ section {
   display: flex;
   gap: 3rem;
   align-items: flex-start;
-  
+
 }
 
 .details-container {
@@ -366,7 +374,7 @@ section {
   background: white;
   border-radius: 1.5rem;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2.5rem;
 }
 
@@ -375,7 +383,7 @@ section {
   background: white;
   border-radius: 1.5rem;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2.5rem;
   margin-top: 80px;
 }
@@ -386,7 +394,7 @@ section {
   .about-columns {
     flex-direction: column;
   }
-  
+
   .details-container,
   .text-container {
     width: 100%;
@@ -434,7 +442,8 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
   padding: 1.5rem;
-  flex: 1 1 calc(33.333% - 2rem); /* 3 cards per row (minus gap) */
+  flex: 1 1 calc(33.333% - 2rem);
+  /* 3 cards per row (minus gap) */
   min-width: 250px;
   max-width: 350px;
 }
@@ -468,7 +477,8 @@ section {
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .details-container {
-    flex: 1 1 calc(50% - 2rem); /* 2 cards per row on medium screens */
+    flex: 1 1 calc(50% - 2rem);
+    /* 2 cards per row on medium screens */
   }
 }
 
@@ -476,12 +486,13 @@ section {
   .about-containers {
     flex-direction: column;
   }
-  
+
   .details-container {
     width: 100%;
     max-width: 100%;
   }
 }
+
 /* PROJECTS SECTION */
 #projects {
   padding: 4rem 2rem;
@@ -639,7 +650,8 @@ footer p {
 .certifications-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* This is the key property */
+  justify-content: center;
+  /* This is the key property */
   gap: 2rem;
   padding: 1rem;
 }
@@ -649,7 +661,8 @@ footer p {
   border-radius: 0.8rem;
   padding: 2rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  width: 280px; /* Fixed width */
+  width: 280px;
+  /* Fixed width */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -702,7 +715,8 @@ footer p {
 }
 
 .experience-details-container {
-  max-width: 800px; /* Narrower container for single column */
+  max-width: 800px;
+  /* Narrower container for single column */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -791,11 +805,12 @@ footer p {
   .internship-card {
     padding: 1.5rem;
   }
-  
+
   .experience-details-container {
     padding: 0 1rem;
   }
 }
+
 /* ... (keep all your other existing styles) ... */
 
 /* Responsive adjustments */
