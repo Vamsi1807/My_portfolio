@@ -246,6 +246,26 @@ section {
   /* Space between buttons and icons */
 }
 
+/* PROFILE SECTION - BUTTON CONTAINER */
+#profile .btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 auto 1rem auto;
+}
+
+/* Responsive: stack buttons vertically on small screens */
+@media (max-width: 900px) {
+  #profile .btn-container {
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    align-items: center;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   #profile {
@@ -284,6 +304,64 @@ section {
 
   .section__text__p2 {
     font-size: 1.4rem;
+  }
+}
+
+/* PROFILE SECTION - Responsive Fix */
+@media (max-width: 900px) {
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: auto;
+    padding: 2rem 1rem;
+    margin: 0;
+  }
+  .section__pic-container {
+    height: 220px;
+    width: 220px;
+    margin-bottom: 1.5rem;
+  }
+  .section__text {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .section__text__p1 {
+    font-size: 1.1rem;
+  }
+  .title {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  .section__text__p2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  #socials-container {
+    gap: 1rem;
+    margin: 1.2rem auto;
+  }
+  .btn-container {
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 500px) {
+  #profile {
+    padding: 1rem 0.2rem;
+  }
+  .section__pic-container {
+    height: 140px;
+    width: 140px;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .section__text__p2 {
+    font-size: 1rem;
   }
 }
 
@@ -393,11 +471,14 @@ section {
 @media (max-width: 900px) {
   .about-columns {
     flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
   }
-
   .details-container,
   .text-container {
     width: 100%;
+    margin: 0;
+    padding: 1.5rem;
   }
 }
 
@@ -577,10 +658,35 @@ section {
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    height: auto;
   }
-
   .project-img {
-    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+    max-width: 350px;
+    height: 180px;
+    border-radius: 1rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .project-details {
+    padding: 1rem;
+    width: 100%;
+  }
+  .project-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+  .project-description {
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+  .btn-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
   }
 }
 
@@ -813,8 +919,6 @@ footer p {
     padding: 0 1rem;
   }
 }
-
-/* ... (keep all your other existing styles) ... */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
