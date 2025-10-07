@@ -422,8 +422,9 @@ section {
 .experience-details-container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 2rem;       /* spacing between cards */
 }
 
 .about-containers {
@@ -672,7 +673,7 @@ footer p {
 /* Rest of your styles remain the same */
 .certification-img-container {
   width: 150px;
-  height: 150px;
+  height: 100px;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
