@@ -422,9 +422,8 @@ section {
 .experience-details-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
-  gap: 2rem;       /* spacing between cards */
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-containers {
@@ -638,19 +637,20 @@ footer p {
 /* Certifications Section */
 /* ===== CERTIFICATIONS SECTION ===== */
 #certifications {
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   background-color: #f8f9fa;
   text-align: center;
 }
 
 .certifications-container {
-  max-width: 1200px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
 .certifications-grid {
   display: flex;
   flex-wrap: wrap;
+  
   justify-content: center;
   /* This is the key property */
   gap: 2rem;
@@ -660,9 +660,10 @@ footer p {
 .certification-item {
   background-color: white;
   border-radius: 0.8rem;
-  padding: 2rem;
+  padding: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  width: 280px;
+  width: 250px;
+  
   /* Fixed width */
   display: flex;
   flex-direction: column;
@@ -722,6 +723,7 @@ footer p {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding :10px;
 }
 
 .internship-card {
